@@ -17,6 +17,7 @@ body {
     padding: 1rem 2rem;
     //bring back to top after img and hero
     z-index: 1;
+    backdrop-filter: blur(5px);
 
     a {
         text-decoration: none;
@@ -39,6 +40,46 @@ body {
                 background-color: $background-medium;
             }
         }
+    }
+
+    //responsive menu
+    .menu-btn {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 1.5rem;
+        height: 1.5rem;
+        cursor: pointer;
+        z-index: 1;
+
+        &-lines,
+        &-lines::before,
+        &-lines::after {
+            width: 1.5rem;
+            height: .1rem;
+            background-color: #111111;
+            transition: all .5s ease-in-out;
+        }
+        
+        &-lines::before,
+        &-lines::after {
+            content: '';
+            position: absolute;
+        }
+
+        &-lines::before {
+            transform: translateY(-.5rem);
+        }
+        &-lines::after {
+            transform: translateY(+.5rem);
+        }
+        
+       
+         
+
+
+
     }
     
 }
@@ -109,14 +150,6 @@ body {
 
     .shape-fill {
         fill: #FFFFFF;
-    }
-
-    //tablet
-    @media (max-width: 767px) {
-        &svg {
-            width: calc(200% + 1.3px);
-            height: 150px;
-        }
     }
 
     //mobile

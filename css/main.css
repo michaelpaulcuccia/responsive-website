@@ -24,6 +24,8 @@ body {
           justify-content: space-between;
   padding: 1rem 2rem;
   z-index: 1;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
 }
 
 .header a {
@@ -52,6 +54,46 @@ body {
 
 .header .menu-items li a:hover {
   background-color: #ccc7d3;
+}
+
+.header .menu-btn {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 1.5rem;
+  height: 1.5rem;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.header .menu-btn-lines, .header .menu-btn-lines::before, .header .menu-btn-lines::after {
+  width: 1.5rem;
+  height: .1rem;
+  background-color: #111111;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+}
+
+.header .menu-btn-lines::before, .header .menu-btn-lines::after {
+  content: '';
+  position: absolute;
+}
+
+.header .menu-btn-lines::before {
+  -webkit-transform: translateY(-0.5rem);
+          transform: translateY(-0.5rem);
+}
+
+.header .menu-btn-lines::after {
+  -webkit-transform: translateY(0.5rem);
+          transform: translateY(0.5rem);
 }
 
 .section {
@@ -121,13 +163,6 @@ body {
 
 .custom-shape-divider-bottom-1619462440 .shape-fill {
   fill: #FFFFFF;
-}
-
-@media (max-width: 767px) {
-  .custom-shape-divider-bottom-1619462440svg {
-    width: calc(200% + 1.3px);
-    height: 150px;
-  }
 }
 
 @media (max-width: 500px) {
