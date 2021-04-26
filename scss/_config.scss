@@ -1,0 +1,13 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+//colors
+$font-dark: #111111;
+
+//mixins
+@mixin background-transition-ease {
+    transition: background .3s ease-in-out;
+}
