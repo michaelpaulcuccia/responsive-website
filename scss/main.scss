@@ -51,7 +51,14 @@ body {
     align-items: center;
 
     &.hero-section {
-        background-color: #dfdbe5;        
+        background-color: #dfdbe5;    
+        
+        img {
+            //min, sweet spot, max
+            width: clamp(250px, 30vw, 500px);
+            //change direction?
+            //transform: scaleX(-1)
+        }
     }
 
     .hero-col {
@@ -84,3 +91,43 @@ body {
     }
 }
 
+.custom-shape-divider-bottom-1619462440 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+
+    &svg {
+        position: relative;
+        display: block;
+        width: calc(100% + 1.3px);
+        height: 171px;
+    }
+
+    .shape-fill {
+        fill: #FFFFFF;
+    }
+
+    //tablet
+    @media (max-width: 767px) {
+        &svg {
+            width: calc(200% + 1.3px);
+            height: 150px;
+        }
+    }
+
+    //mobile
+    @media (max-width: 500px) {
+        &svg {
+            width: calc(250% + 1.3px);
+            height: 150px;
+        }
+    }
+}
+
+.bottom-col {
+    width: clamp(300px, 50vw, 600px);
+}

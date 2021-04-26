@@ -72,6 +72,10 @@ body {
   background-color: #dfdbe5;
 }
 
+.section.hero-section img {
+  width: clamp(250px, 30vw, 500px);
+}
+
 .section .hero-col {
   padding: clamp(1rem, 8vw, 5rem);
   max-width: 50%;
@@ -95,5 +99,45 @@ body {
 .section p {
   color: #5a4d70;
   padding-right: 1rem;
+}
+
+.custom-shape-divider-bottom-1619462440 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1619462440svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 171px;
+}
+
+.custom-shape-divider-bottom-1619462440 .shape-fill {
+  fill: #FFFFFF;
+}
+
+@media (max-width: 767px) {
+  .custom-shape-divider-bottom-1619462440svg {
+    width: calc(200% + 1.3px);
+    height: 150px;
+  }
+}
+
+@media (max-width: 500px) {
+  .custom-shape-divider-bottom-1619462440svg {
+    width: calc(250% + 1.3px);
+    height: 150px;
+  }
+}
+
+.bottom-col {
+  width: clamp(300px, 50vw, 600px);
 }
 /*# sourceMappingURL=main.css.map */
